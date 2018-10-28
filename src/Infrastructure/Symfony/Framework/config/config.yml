@@ -14,7 +14,6 @@ imports:
     - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
     - { resource: "@SyliusAdminApiBundle/Resources/config/app/config.yml" }
     - { resource: "@ShopApiPlugin/Resources/config/app/config.yml" }
-
     - { resource: ../../../../../parameters.yml }
     - { resource: security.yml }
 
@@ -22,7 +21,6 @@ parameters:
     locale: en
     jwt_private_key_path: '%kernel.root_dir%/../../../../var/jwt/private.pem'
     jwt_public_key_path: '%kernel.root_dir%/../../../../var/jwt/public.pem'
-    jwt_key_pass_phrase: 'batela'
     jwt_token_ttl: 3600
 
 framework:
@@ -54,7 +52,7 @@ doctrine:
         dbname: "%database_name%"
         user: "%database_user%"
         password: "%database_password%"
-        server_version: "5.5"
+        server_version: "5.7"
         charset: UTF8
 
 doctrine_migrations:
@@ -90,7 +88,7 @@ fos_rest:
 nelmio_cors:
     paths:
         '^/shop-api/':
-            allow_origin: ['.*\.batela.com', '.*\.lin3sdev.com', '^http://localhost:[0-9]+', '^http://192.168.[0-9]+.[0-9]+:[0-9]+']
+            allow_origin: ['.*\.shop.com', '.*\.lin3sdev.com', '^http://localhost:[0-9]+', '^http://192.168.[0-9]+.[0-9]+:[0-9]+']
             allow_methods: ['GET', 'POST', 'PUT']
             allow_headers: ['Content-Type', 'content-type', 'Authorization', 'authorization']
             max_age: 3600

@@ -34,4 +34,7 @@
 !var/logs/.gitkeep
 /var/sessions/*
 !var/sessions/.gitkeep
+/var/jwt/*
+!var/jwt/.gitkeep
 /vendor
+.DS_Store
