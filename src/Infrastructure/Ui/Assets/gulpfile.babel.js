@@ -30,7 +30,7 @@ const config = [
 
 export const buildAdmin = function buildAdmin() {
   return gulp.src('../../../../vendor/sylius/sylius/src/Sylius/Bundle/AdminBundle/gulpfile.babel.js', { read: false })
-      .pipe(chug({ args: config }));
+      .pipe(chug({ args: config, tasks: 'build'  }));
 };
 buildAdmin.description = 'Build admin assets.';
 export const watchAdmin = function watchAdmin() {
@@ -41,6 +41,8 @@ watchAdmin.description = 'Watch admin asset sources and rebuild on changes.';
 
 export const build = gulp.parallel(buildAdmin);
 build.description = 'Build assets.';
+export const watch = gulp.parallel(watchAdmin);
+watch.description = 'Watch asset sources and rebuild on changes.';
 
 gulp.task('admin', buildAdmin);
 gulp.task('admin-watch', watchAdmin);

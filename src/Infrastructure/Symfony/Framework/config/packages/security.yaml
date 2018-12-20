@@ -9,9 +9,9 @@
 # @author Gorka Laucirica <gorka.lauzirika@gmail.com>
 
 parameters:
-    sylius.security.admin_regex: "^/admin"
-    sylius.security.api_regex: "^/api"
-    shop_api.security.regex: "^/shop-api"
+    sylius.security.admin_regex: "^/shop/admin"
+    sylius.security.api_regex: "^/shop/api"
+    shop_api.security.regex: "^/shop/shop-api"
 
 security:
     providers:

@@ -1,0 +1,6 @@
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/../../Persistence/Doctrine/Migrations"
+    namespace: ECommerce\Infrastructure\Persistence\Doctrine\Migrations
+    table_name: migration_versions
+    name: App migrations
+
