@@ -1,0 +1,11 @@
+sylius_api:
+  resource: "@SyliusAdminApiBundle/Resources/config/routing.yml"
+  prefix: /shop/api
+
+sylius_shop_api:
+  resource: "@ShopApiPlugin/Resources/config/routing.yml"
+  prefix: /shop/shop-api
+
+shop_api_login_check:
+  methods: [POST]
+  path: /shop-api/login_check

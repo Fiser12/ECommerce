@@ -1,3 +1,6 @@
-nelmio_alice:
-    functions_blacklist:
-        - 'current'
+knp_gaufrette:
+    adapters:
+        sylius_image:
+            local:
+                directory: "%kernel.root_dir%/../../Ui/Http/Symfony/image"
+                create: true

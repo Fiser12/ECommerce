@@ -1,14 +1,16 @@
 imports:
     - { resource: "@SyliusCoreBundle/Resources/config/app/config.yml" }
-
     - { resource: "@SyliusAdminBundle/Resources/config/app/config.yml" }
-    - { resource: "@SyliusAdminApiBundle/Resources/config/app/config.yml" }
-
     - { resource: "@SyliusShopBundle/Resources/config/app/config.yml" }
+    - { resource: "@SyliusAdminApiBundle/Resources/config/app/config.yml" }
+    - { resource: "@ShopApiPlugin/Resources/config/app/config.yml" }
+
 
 parameters:
-    sylius_core.public_dir: '%kernel.project_dir%/public'
-
-sylius_shop:
-    product_grid:
-        include_all_descendants: true
+    locale: en
+    jwt_private_key_path: '%kernel.root_dir%/../../../../var/jwt/private.pem'
+    jwt_public_key_path: '%kernel.root_dir%/../../../../var/jwt/public.pem'
+    jwt_token_ttl: 3600
+    secret: '%env(resolve:SECRET)%'
+    jwt_key_pass_phrase: '%env(resolve:JWT_PASSPHRASE)%'
+    env(DATABASE_URL): ''

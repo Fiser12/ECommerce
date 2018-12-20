@@ -15,6 +15,7 @@ parameters:
 
 security:
     providers:
+        in_memory: { memory: ~ }
         sylius_admin_user_provider:
             id: sylius.admin_user_provider.email_or_name_based
         sylius_shop_user_provider:
@@ -23,6 +24,7 @@ security:
         Sylius\Component\User\Model\UserInterface: sha512
     firewalls:
         admin:
+            provider: in_memory
             switch_user: true
             context: admin
             pattern: "%sylius.security.admin_regex%"
@@ -49,16 +51,19 @@ security:
             anonymous: true
 
         oauth_token:
+            provider: in_memory
             pattern: "%sylius.security.api_regex%/oauth/v2/token"
             security: false
 
         api:
+            provider: in_memory
             pattern: "%sylius.security.api_regex%/.*"
             fos_oauth:  true
             stateless:  true
             anonymous:  true
 
         shop_api_login:
+            provider: in_memory
             pattern:  "%shop_api.security.regex%/login"
             stateless: true
             anonymous: true
@@ -71,6 +76,7 @@ security:
                 require_previous_session: false
 
         shop_api:
+            provider: in_memory
             pattern: "%shop_api.security.regex%"
             stateless:  true
             anonymous:  true
