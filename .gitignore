@@ -30,8 +30,8 @@
 /var/bootstrap.php.cache
 /var/cache/*
 !var/cache/.gitkeep
-/var/logs/*
-!var/logs/.gitkeep
+/var/log/*
+!var/log/.gitkeep
 /var/sessions/*
 !var/sessions/.gitkeep
 /var/jwt/*
@@ -44,7 +44,6 @@
 /.env.*.local
 /public/bundles/
 /var/
-/vendor/
 ###< symfony/framework-bundle ###
 
 ###> lexik/jwt-authentication-bundle ###
@@ -52,6 +51,5 @@
 ###< lexik/jwt-authentication-bundle ###
 
 ###> friendsofphp/php-cs-fixer ###
-/.php_cs
 /.php_cs.cache
 ###< friendsofphp/php-cs-fixer ###
