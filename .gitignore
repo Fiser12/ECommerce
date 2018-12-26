@@ -25,6 +25,7 @@
 !/src/Infrastructure/Ui/Assets/build/.gitkeep
 /src/Infrastructure/Ui/Http/Symfony/.htaccess
 /src/Infrastructure/Ui/Http/Symfony/bundles
+/src/Infrastructure/Ui/Http/Symfony/image
 /src/Infrastructure/Ui/Http/Symfony/robots.txt
 /src/Infrastructure/Ui/manifest.json
 /var/bootstrap.php.cache

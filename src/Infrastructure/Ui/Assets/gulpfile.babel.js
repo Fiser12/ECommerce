@@ -2,7 +2,6 @@ import chug from 'gulp-chug';
 import gulp from 'gulp';
 import yargs from 'yargs';
 
-
 const { argv } = yargs
     .options({
       rootPath: {
@@ -20,12 +19,11 @@ const { argv } = yargs
     });
 
 const config = [
-  '--rootPath',
-  argv.rootPath || __dirname + '/assets/',
-  '--nodeModulesPath',
-  argv.nodeModulesPath || __dirname + '/node_modules/'
+    '--rootPath',
+    argv.rootPath || __dirname + '/assets/',
+    '--nodeModulesPath',
+    argv.nodeModulesPath || '../../../../node_modules',
 ];
-
 
 
 export const buildAdmin = function buildAdmin() {
